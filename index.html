@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
- 
+
     :root {
       --bg: #f5f4f0;
       --surface: #ffffff;
@@ -17,7 +17,7 @@
       --border: #e0dfd9;
       --radius: 4px;
     }
- 
+
     body {
       background: var(--bg);
       color: var(--text);
@@ -25,7 +25,7 @@
       font-weight: 300;
       line-height: 1.6;
     }
- 
+
     /* ── Header ── */
     header {
       padding: 64px 64px 56px;
@@ -33,7 +33,7 @@
       opacity: 0;
       animation: fadeUp 0.7s ease forwards;
     }
- 
+
     .header-top {
       display: flex;
       align-items: flex-start;
@@ -42,7 +42,7 @@
       flex-wrap: wrap;
       margin-bottom: 32px;
     }
- 
+
     header h1 {
       font-family: 'DM Mono', monospace;
       font-size: clamp(2rem, 5vw, 3.5rem);
@@ -50,7 +50,7 @@
       letter-spacing: -0.03em;
       line-height: 1;
     }
- 
+
     header h1 span {
       display: block;
       font-size: 0.95rem;
@@ -60,7 +60,7 @@
       margin-top: 10px;
       font-family: 'DM Sans', sans-serif;
     }
- 
+
     .contact-links {
       display: flex;
       flex-direction: column;
@@ -68,7 +68,7 @@
       gap: 6px;
       padding-top: 6px;
     }
- 
+
     .contact-links a {
       font-family: 'DM Mono', monospace;
       font-size: 0.78rem;
@@ -77,16 +77,16 @@
       letter-spacing: 0.05em;
       transition: opacity 0.2s;
     }
- 
+
     .contact-links a:hover { opacity: 0.6; }
- 
+
     .bio {
       max-width: 640px;
       font-size: 0.95rem;
       color: var(--muted);
       line-height: 1.75;
     }
- 
+
     .skills-row {
       margin-top: 28px;
       display: flex;
@@ -94,7 +94,7 @@
       gap: 8px;
       align-items: center;
     }
- 
+
     .skills-label {
       font-family: 'DM Mono', monospace;
       font-size: 0.7rem;
@@ -103,7 +103,7 @@
       color: var(--muted);
       margin-right: 4px;
     }
- 
+
     .skill-chip {
       font-family: 'DM Mono', monospace;
       font-size: 0.72rem;
@@ -113,14 +113,14 @@
       color: var(--text);
       background: var(--surface);
     }
- 
+
     /* ── Main ── */
     main {
       padding: 64px;
       max-width: 1400px;
       margin: 0 auto;
     }
- 
+
     .filter-bar {
       display: flex;
       flex-wrap: wrap;
@@ -129,7 +129,7 @@
       opacity: 0;
       animation: fadeUp 0.6s ease 0.15s forwards;
     }
- 
+
     .filter-btn {
       font-family: 'DM Mono', monospace;
       font-size: 0.75rem;
@@ -142,21 +142,21 @@
       cursor: pointer;
       transition: all 0.2s;
     }
- 
+
     .filter-btn:hover,
     .filter-btn.active {
       background: var(--text);
       color: var(--bg);
       border-color: var(--text);
     }
- 
+
     /* ── Grid ── */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
       gap: 2px;
     }
- 
+
     /* ── Card ── */
     .card {
       background: var(--surface);
@@ -167,18 +167,18 @@
       opacity: 0;
       animation: fadeUp 0.6s ease forwards;
     }
- 
+
     .card.hidden { display: none; }
     .card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.08); }
     .card:hover .card-thumb { transform: scale(1.03); }
- 
+
     .card-thumb-wrap {
       width: 100%;
       aspect-ratio: 4/3;
       overflow: hidden;
       background: var(--bg);
     }
- 
+
     .card-thumb {
       width: 100%;
       height: 100%;
@@ -186,40 +186,40 @@
       display: block;
       transition: transform 0.4s ease;
     }
- 
+
     .card-body {
       padding: 22px 26px 26px;
       border-top: 1px solid var(--border);
     }
- 
+
     .card-meta {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 8px;
     }
- 
+
     .card-title {
       font-family: 'DM Mono', monospace;
       font-size: 0.95rem;
       font-weight: 500;
     }
- 
+
     .card-year {
       font-family: 'DM Mono', monospace;
       font-size: 0.72rem;
       color: var(--muted);
     }
- 
+
     .card-desc {
       font-size: 0.87rem;
       color: var(--muted);
       line-height: 1.65;
       margin-bottom: 14px;
     }
- 
+
     .card-tags { display: flex; flex-wrap: wrap; gap: 6px; }
- 
+
     .tag {
       font-family: 'DM Mono', monospace;
       font-size: 0.68rem;
@@ -230,7 +230,7 @@
       padding: 2px 7px;
       border-radius: var(--radius);
     }
- 
+
     /* ── Footer ── */
     footer {
       border-top: 1px solid var(--border);
@@ -243,9 +243,9 @@
       flex-wrap: wrap;
       gap: 8px;
     }
- 
+
     footer a { color: var(--accent); text-decoration: none; }
- 
+
     /* ── Project Page ── */
     .project-page {
       display: none;
@@ -256,14 +256,14 @@
       overflow-y: auto;
       animation: fadeIn 0.3s ease;
     }
- 
+
     .project-page.open { display: block; }
- 
+
     @keyframes fadeIn {
       from { opacity: 0; }
       to   { opacity: 1; }
     }
- 
+
     .pp-back {
       position: sticky;
       top: 0;
@@ -275,7 +275,7 @@
       align-items: center;
       gap: 12px;
     }
- 
+
     .pp-back button {
       font-family: 'DM Mono', monospace;
       font-size: 0.78rem;
@@ -288,32 +288,32 @@
       cursor: pointer;
       transition: all 0.2s;
     }
- 
+
     .pp-back button:hover {
       background: var(--text);
       color: var(--bg);
       border-color: var(--text);
     }
- 
+
     .pp-back-label {
       font-family: 'DM Mono', monospace;
       font-size: 0.75rem;
       color: var(--muted);
     }
- 
+
     .pp-content {
       max-width: 860px;
       margin: 0 auto;
       padding: 56px 48px 96px;
     }
- 
+
     .pp-year {
       font-family: 'DM Mono', monospace;
       font-size: 0.75rem;
       color: var(--muted);
       margin-bottom: 10px;
     }
- 
+
     .pp-title {
       font-family: 'DM Mono', monospace;
       font-size: clamp(1.6rem, 4vw, 2.4rem);
@@ -322,16 +322,17 @@
       line-height: 1.15;
       margin-bottom: 16px;
     }
- 
+
     .pp-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 24px; }
- 
+
     .pp-desc {
       font-size: 1rem;
       color: var(--muted);
       line-height: 1.85;
       max-width: 680px;
+      white-space: pre-line; /* allows \n line breaks in descriptions */
     }
- 
+
     .pp-tools-label {
       font-family: 'DM Mono', monospace;
       font-size: 0.7rem;
@@ -341,20 +342,20 @@
       margin-top: 28px;
       margin-bottom: 6px;
     }
- 
+
     .pp-tools {
       font-family: 'DM Mono', monospace;
       font-size: 0.85rem;
       color: var(--text);
     }
- 
+
     .pp-media {
       margin-top: 48px;
       display: flex;
       flex-direction: column;
       gap: 12px;
     }
- 
+
     .pp-media img,
     .pp-media video {
       width: 100%;
@@ -362,22 +363,26 @@
       display: block;
       border: 1px solid var(--border);
     }
- 
+
     .pp-media video { background: #000; }
- 
+
     /* ── Animations ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(16px); }
       to   { opacity: 1; transform: translateY(0); }
     }
- 
-    .card:nth-child(1) { animation-delay: 0.15s; }
-    .card:nth-child(2) { animation-delay: 0.25s; }
-    .card:nth-child(3) { animation-delay: 0.35s; }
-    .card:nth-child(4) { animation-delay: 0.45s; }
-    .card:nth-child(5) { animation-delay: 0.55s; }
-    .card:nth-child(6) { animation-delay: 0.65s; }
- 
+
+    .card:nth-child(1)  { animation-delay: 0.10s; }
+    .card:nth-child(2)  { animation-delay: 0.18s; }
+    .card:nth-child(3)  { animation-delay: 0.26s; }
+    .card:nth-child(4)  { animation-delay: 0.34s; }
+    .card:nth-child(5)  { animation-delay: 0.42s; }
+    .card:nth-child(6)  { animation-delay: 0.50s; }
+    .card:nth-child(7)  { animation-delay: 0.58s; }
+    .card:nth-child(8)  { animation-delay: 0.66s; }
+    .card:nth-child(9)  { animation-delay: 0.74s; }
+    .card:nth-child(10) { animation-delay: 0.82s; }
+
     /* ── Responsive ── */
     @media (max-width: 768px) {
       header, main, footer { padding: 32px 24px; }
@@ -389,7 +394,7 @@
   </style>
 </head>
 <body>
- 
+
   <header>
     <div class="header-top">
       <h1>
@@ -398,58 +403,58 @@
       </h1>
       <div class="contact-links">
         <a href="mailto:andreaspjobs@gmail.com">andreaspjobs@gmail.com</a>
+        <a href="https://linkedin.com/in/yourhandle" target="_blank">linkedin.com/in/yourhandle</a> <!-- ★ EDIT -->
       </div>
     </div>
- 
+
     <p class="bio">
       Engineering student with a focus on rocketry but interested in branching out to other fields.
       Excited to work on improving both atmospheric and space flight in any way I can.
       Looking for a summer internship or fall co-op.
     </p>
- 
+
     <div class="skills-row">
       <span class="skills-label">Skills —</span>
       <span class="skill-chip">SolidWorks</span>
       <span class="skill-chip">OnShape</span>
       <span class="skill-chip">FEA</span>
-       <span class="skill-chip">Aerodynamic Analysis</span>
-       <span class="skill-chip">Control Systems</span>
-       <span class="skill-chip">Instrumentation</span>
+      <span class="skill-chip">Aerodynamic Analysis</span>
+      <span class="skill-chip">Control Systems</span>
+      <span class="skill-chip">Instrumentation</span>
       <span class="skill-chip">C++</span>
       <span class="skill-chip">Python</span>
       <span class="skill-chip">MATLAB</span>
       <span class="skill-chip">Composites Manufacturing</span>
-       <span class="skill-chip">Workshop Power Tools/General Manufacturing</span>
+      <span class="skill-chip">Workshop / General Manufacturing</span>
     </div>
   </header>
- 
+
   <main>
- 
+
     <div class="filter-bar">
       <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="rocketry">Rocketry</button>
       <button class="filter-btn" data-filter="mechanical">Mechanical</button>
       <button class="filter-btn" data-filter="software">Software</button>
-      <button class="filter-btn" data-filter="rocketry">Rocketry</button>
     </div>
- 
+
     <div class="grid" id="grid">
- 
+
       <!--
         HOW TO ADD A PROJECT:
         1. Copy a card block below
-        2. Set data-category — must be all lowercase and match a filter button exactly
-           (e.g. "rocketry", "mechanical", "software")
-        3. Fill in openProject() values:
+        2. data-category must be lowercase and match a filter button: "rocketry", "mechanical", "software"
+        3. Fill in openProject():
              - Title
-             - Full description (use \' for apostrophes)
-             - Thumbnail: image shown on the card
-             - Media array: all images/videos stacked on the full page
-             - Year
+             - Description (use \' for apostrophes, \n for paragraph breaks)
+             - Thumbnail image path
+             - Media array: images/videos shown on the full page, in order
+             - Year / date range
              - Tools (comma-separated)
              - Tags array
-        4. Update card-title, card-desc, card-year, tag spans
+        4. Update card-title, card-desc, card-year, tag spans to match
       -->
- 
+
       <!-- PROJECT 1: Viper -->
       <div class="card"
            data-category="rocketry"
@@ -470,14 +475,14 @@
             <div class="card-title">L1 Cert Rocket: Viper</div>
             <div class="card-year">2025</div>
           </div>
-          <div class="card-desc">A scratch designed and built L1 Cert rocket.</div>
+          <div class="card-desc">A scratch designed and built L1 certification rocket.</div>
           <div class="card-tags">
             <span class="tag">Rocketry</span>
             <span class="tag">Design</span>
           </div>
         </div>
       </div>
- 
+
       <!-- PROJECT 2: Olympus -->
       <div class="card"
            data-category="rocketry"
@@ -486,9 +491,9 @@
              'Olympus was the competition rocket for the 2024-2025 season at the International Rocketry Engineering Competition. As the Flight Hardware Lead at the time, I was responsible for the construction of the rocket. Throughout my time as lead I devoted my time to teaching everyone clean and efficient construction techniques, as well as expanding everyone\'s composites manufacturing experience. We had to make a custom motor tube for our test launch as well as custom boat tails.',
              'images/OlympusThumb.jpg',
              ['images/OlympusOR.png', 'images/OlympusBare.jpg', 'images/OlympusPretty.JPG', 'images/OlympusVid.mp4'],
-             'Fall 2024 - Summer 2025',
+             'Fall 2024 – Summer 2025',
              'OpenRocket, Workshop Tools, Composites',
-             ['Rocketry']
+             ['Rocketry', 'Composites']
            )">
         <div class="card-thumb-wrap">
           <img class="card-thumb" src="images/OlympusThumb.jpg" alt="Olympus">
@@ -498,25 +503,24 @@
             <div class="card-title">IREC 2025: Olympus</div>
             <div class="card-year">2025</div>
           </div>
-          <div class="card-desc">2025 Competition Rocket</div>
+          <div class="card-desc">2025 IREC competition rocket.</div>
           <div class="card-tags">
             <span class="tag">Rocketry</span>
-            <span class="tag">Design</span>
             <span class="tag">Composites</span>
           </div>
         </div>
       </div>
- 
+
       <!-- PROJECT 3: Aquilla -->
       <div class="card"
            data-category="rocketry"
            onclick="openProject(
-             'L2 Cert/Test Rocket: Aquilla',
+             'L2 Cert / Test Rocket: Aquilla',
              'Aquilla serves as the hybrid between a level 2 certification rocket and a test platform for the 2026 airbrakes and custom flight computer. It was designed as a scaled down version of the first initial designs of the 2026 competition rocket and quickly became its own unique rocket. It is currently yet to launch, but it should be happening by May 2026.',
              'images/AquillaFIn.jpg',
-             ['images/AquillaOR.png', 'images/VacuumBagging.jpg', 'images/MotorTube.jpg', 'images/FinAlignment.jpg','images/MotorRetention.jpg',  'images/AquillaFIn.jpg'],
+             ['images/AquillaOR.png', 'images/VacuumBagging.jpg', 'images/MotorTube.jpg', 'images/FinAlignment.jpg', 'images/MotorRetention.jpg', 'images/AquillaFIn.jpg'],
              'Spring 2026',
-             ' ',
+             'OpenRocket, SolidWorks, Composites, Workshop Tools',
              ['Rocketry']
            )">
         <div class="card-thumb-wrap">
@@ -524,53 +528,61 @@
         </div>
         <div class="card-body">
           <div class="card-meta">
-            <div class="card-title">L2 Cert/Test Rocket</div>
+            <div class="card-title">L2 Cert / Test Rocket: Aquilla</div>
             <div class="card-year">2026</div>
           </div>
-          <div class="card-desc">My custom L2 rocket also serving as a test platform.</div>
+          <div class="card-desc">Custom L2 rocket doubling as a test platform for airbrakes and flight computer.</div>
           <div class="card-tags">
             <span class="tag">Rocketry</span>
           </div>
         </div>
       </div>
- 
-      <!-- PROJECT 4: placeholder -->
+
+      <!-- PROJECT 4: Aurora -->
       <div class="card"
            data-category="rocketry"
            onclick="openProject(
              'IREC 2026: Aurora',
-             'As the Chief Engineer of the Flight Systems team for the 2025-2026 season, I am in charge of the design, facilitating cosntruction and integration, and making sure the rocket launches. I chose this design to prepare the overall lacking manufacturing performance of our team so they can be ready to make a two stage rocket the year after. Not to say this one is simple, as it has a custom air brakes system, custom flight computers, a 3U cubesat, as well as using canard fins. It is perfectly designed to reach its target altitude with the use of airbrakes, no more no less (assuming the airbrakes get to be used at all). We have test launched this without the airbrakes and it performed better than expected. \n While I still spent quite a bit of time helping the main structures team make the rocket, I also had to spend my fair share learning about all the other systems and making sure that they work together well and easily integrate in the final rocket.',
+             'As the Chief Engineer of the Flight Systems team for the 2025-2026 season, I am in charge of the design, facilitating construction and integration, and making sure the rocket launches. I chose this design to prepare the overall lacking manufacturing performance of our team so they can be ready to make a two stage rocket the year after.\n\nNot to say this one is simple — it has a custom airbrakes system, custom flight computers, a 3U cubesat, as well as canard fins. It is perfectly designed to reach its target altitude with the use of airbrakes, no more no less. We have test launched this without the airbrakes and it performed better than expected.\n\nWhile I still spent quite a bit of time helping the main structures team build the rocket, I also had to learn about all the other systems and make sure they work together and integrate cleanly into the final rocket.',
              'images/AuroraThumb.jpg',
-             [''],
+             ['images/AuroraThumb.jpg'],
              '2026',
-             'Tools used',
+             'OpenRocket, SolidWorks, Composites, C++',
              ['Rocketry']
            )">
         <div class="card-thumb-wrap">
-          <img class="card-thumb" src="images/AuroraThumb.jpg" alt="IREC 2026">
+          <img class="card-thumb" src="images/AuroraThumb.jpg" alt="IREC 2026 Aurora">
         </div>
         <div class="card-body">
           <div class="card-meta">
             <div class="card-title">IREC 2026: Aurora</div>
-            <div class="card-year">2024</div>
+            <div class="card-year">2026</div>
           </div>
-          <div class="card-desc">One-line summary of what this project is.</div>
+          <div class="card-desc">2026 IREC competition rocket with airbrakes, canards, and a 3U cubesat payload.</div>
           <div class="card-tags">
-            <span class="tag">Software</span>
+            <span class="tag">Rocketry</span>
           </div>
         </div>
       </div>
- 
-      <!-- Copy a card block above to add more projects -->
- 
+
+      <!-- ─────────────────────────────────────────
+           COMING SOON — add these when ready:
+           - Drone Simulator / Estimator  → software
+           - SAR Radar                    → software or mechanical
+           - Controls projects            → software
+           - Battle Bot                   → mechanical
+           - Instrumentation Experiments  → mechanical
+           - Speed Tunnel Testing         → mechanical
+      ───────────────────────────────────────── -->
+
     </div>
   </main>
- 
+
   <footer>
     <span>Andreas Parrilha · Engineering Portfolio</span>
     <span><a href="mailto:andreaspjobs@gmail.com">andreaspjobs@gmail.com</a></span>
   </footer>
- 
+
   <!-- ── Project Page ── -->
   <div class="project-page" id="projectPage">
     <div class="pp-back">
@@ -587,7 +599,7 @@
       <div class="pp-media" id="pp-media"></div>
     </div>
   </div>
- 
+
   <script>
     // ── Project Page ──
     function openProject(title, desc, thumb, media, year, tools, tags) {
@@ -598,34 +610,32 @@
       document.getElementById('pp-back-label').textContent = title;
       document.getElementById('pp-tags').innerHTML =
         tags.map(t => `<span class="tag">${t}</span>`).join('');
- 
+
       const mediaEl = document.getElementById('pp-media');
       mediaEl.innerHTML = '';
       media.forEach(src => {
+        if (!src) return; // skip empty strings
         const isVideo = src.match(/\.(mp4|webm|mov)$/i);
         const el = document.createElement(isVideo ? 'video' : 'img');
         el.src = src;
-        if (isVideo) {
-          el.controls = true;
-          el.playsInline = true;
-        }
+        if (isVideo) { el.controls = true; el.playsInline = true; }
         mediaEl.appendChild(el);
       });
- 
+
       const page = document.getElementById('projectPage');
       page.classList.add('open');
       page.scrollTop = 0;
       document.body.style.overflow = 'hidden';
     }
- 
+
     function closeProject() {
       document.getElementById('pp-media').querySelectorAll('video').forEach(v => v.pause());
       document.getElementById('projectPage').classList.remove('open');
       document.body.style.overflow = '';
     }
- 
+
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeProject(); });
- 
+
     // ── Filter buttons ──
     document.querySelectorAll('.filter-btn').forEach(btn => {
       btn.addEventListener('click', () => {
@@ -639,6 +649,6 @@
       });
     });
   </script>
- 
+
 </body>
 </html>
