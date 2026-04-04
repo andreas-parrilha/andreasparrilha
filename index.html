@@ -527,6 +527,35 @@
         </div>
       </div>
 
+            <!-- Instrumentation -->
+      <div class="card"
+           data-category="mechanical"
+           onclick="openProject(
+             'Instrumentation: Shoe Drop Testing',
+             'In a class where we learned about basic instrumentation.',
+             'images/SDthumb.jpg',
+             ['images/SD1.jpg', 'images/SD2.jpg', 'images/SD3.jpg'],
+             'Fall 2025',
+             'MATLAB, NI Labview, Basic Electronics, Strain Gages',
+             ['Hardware', 'Software', 'Live Analysis']
+           )">
+        <div class="card-thumb-wrap">
+          <img class="card-thumb" src="images/SDthumb.jpg" alt="SAR">
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <div class="card-title">Instrumentation: Shoe Drop Testing</div>
+            <div class="card-year">2025</div>
+          </div>
+          <div class="card-desc">Finding the dampening of different shoes using a weight.</div>
+          <div class="card-tags">
+            <span class="tag">Hardware</span>
+            <span class="tag">Software</span>
+          </div>
+        </div>
+      </div>
+      
+      
       <!-- SAR -->
       <div class="card"
            data-category="software"
@@ -748,7 +777,7 @@ if (src.startsWith('yt:')) {
         const isVideo = src.match(/\.(mp4|webm|mov)$/i);
         const el = document.createElement(isVideo ? 'video' : 'img');
         el.src = src;
-        if (isVideo) { el.controls = true; el.playsInline = true; }
+        if (isVideo) { el.controls = true; el.playsInline = true; el.muted = true; }        
         mediaEl.appendChild(el);
       });
 
