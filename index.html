@@ -121,35 +121,6 @@
       margin: 0 auto;
     }
 
-    .filter-bar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 40px;
-      opacity: 0;
-      animation: fadeUp 0.6s ease 0.15s forwards;
-    }
-
-    .filter-btn {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.75rem;
-      letter-spacing: 0.08em;
-      padding: 6px 14px;
-      border: 1px solid var(--border);
-      border-radius: 99px;
-      background: transparent;
-      color: var(--muted);
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-
-    .filter-btn:hover,
-    .filter-btn.active {
-      background: var(--text);
-      color: var(--bg);
-      border-color: var(--text);
-    }
-
     /* ── Grid ── */
     .grid {
       display: grid;
@@ -168,7 +139,6 @@
       animation: fadeUp 0.6s ease forwards;
     }
 
-    .card.hidden { display: none; }
     .card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.08); }
     .card:hover .card-thumb { transform: scale(1.03); }
 
@@ -431,47 +401,25 @@
 
     <div class="skills-row">
       <span class="skills-label">Skills —</span>
+      <span class="skill-chip">OpenRocket</span>
       <span class="skill-chip">SolidWorks</span>
-      <span class="skill-chip">OnShape</span>
-      <span class="skill-chip">FEA</span>
-      <span class="skill-chip">Aerodynamic Analysis</span>
-      <span class="skill-chip">Control Systems</span>
-      <span class="skill-chip">Instrumentation</span>
-      <span class="skill-chip">C++</span>
-      <span class="skill-chip">Python</span>
-      <span class="skill-chip">MATLAB</span>
       <span class="skill-chip">Composites Manufacturing</span>
+      <span class="skill-chip">Aerodynamic Analysis</span>
+      <span class="skill-chip">Flight Systems Integration</span>
+      <span class="skill-chip">Structural Design</span>
+      <span class="skill-chip">Signal Processing</span>
+      <span class="skill-chip">Instrumentation &amp; Sensors</span>
+      <span class="skill-chip">C++</span>
+      <span class="skill-chip">MATLAB</span>
+      <span class="skill-chip">Python</span>
       <span class="skill-chip">Workshop / General Manufacturing</span>
+      <span class="skill-chip">3D Printing</span>
     </div>
   </header>
 
   <main>
 
-    <div class="filter-bar">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="rocketry">Rocketry</button>
-      <button class="filter-btn" data-filter="mechanical">Mechanical</button>
-      <button class="filter-btn" data-filter="software">Software</button>
-    </div>
-
     <div class="grid" id="grid">
-
-      <!--
-        HOW TO ADD A PROJECT:
-        1. Copy a card block below
-        2. data-category must be lowercase: "rocketry", "mechanical", or "software"
-        3. Fill in openProject():
-             - Title
-             - Description (use \' for apostrophes, \n\n for paragraph breaks)
-             - Thumbnail image path
-             - Media array: images/videos stacked on full page. For a Google Slides
-               embed, use the special prefix "slides:" before the URL, e.g.:
-               'slides:https://docs.google.com/presentation/d/e/YOUR_ID/pubembed?...'
-             - Year / date range
-             - Tools (comma-separated)
-             - Tags array
-        4. Update card-title, card-desc, card-year, tag spans
-      -->
 
       <!-- AURORA -->
       <div class="card"
@@ -482,7 +430,7 @@
              'images/AuroraThumb.jpg',
              ['images/AuroraOR.png','images/GTest1.mp4','images/GTest2.mp4', 'images/Payload.JPG','images/Michael.JPG','images/Jim.JPG', 'images/AuroraTest.mp4','images/AuroraMid.jpg',],
              '2026',
-             'OpenRocket, SolidWorks, Composites, C++',
+             'OpenRocket, SolidWorks, Composites Manufacturing, C++, Flight Systems Integration',
              ['Rocketry']
            )">
         <div class="card-thumb-wrap">
@@ -509,7 +457,7 @@
              'images/AquillaFIn.jpg',
              ['images/AquillaOR.png', 'images/VacuumBagging.jpg', 'images/MotorTube.jpg', 'images/FinAlignment.jpg', 'images/MotorRetention.jpg', 'images/AquillaFIn.jpg'],
              'Spring 2026',
-             'OpenRocket, SolidWorks, Composites, Workshop Tools',
+             'OpenRocket, SolidWorks, Composites Manufacturing, Workshop Tools',
              ['Rocketry']
            )">
         <div class="card-thumb-wrap">
@@ -527,7 +475,7 @@
         </div>
       </div>
 
-            <!-- Instrumentation -->
+      <!-- Instrumentation -->
       <div class="card"
            data-category="mechanical"
            onclick="openProject(
@@ -536,7 +484,7 @@
              'images/SD1.jpeg',
              ['images/SD1.jpeg', 'pdf:images/report.pdf'],
              'Fall 2025',
-             'MATLAB, NI Labview, Basic Electronics, Strain Gages',
+             'Instrumentation & Sensors, Strain Gages, Wheatstone Bridge, NI LabVIEW, MATLAB',
              ['Hardware', 'Software', 'Live Analysis']
            )">
         <div class="card-thumb-wrap">
@@ -554,8 +502,7 @@
           </div>
         </div>
       </div>
-      
-      
+
       <!-- SAR -->
       <div class="card"
            data-category="software"
@@ -565,7 +512,7 @@
              'images/SARthumb.jpg',
              ['images/SAR1.jpg', 'images/SAR2.jpg', 'images/SAR3.jpg'],
              'Fall 2025',
-             'MATLAB, Python',
+             'Signal Processing, Discrete Fourier Transform, MATLAB, Python',
              ['Software', 'Signal Processing']
            )">
         <div class="card-thumb-wrap">
@@ -593,7 +540,7 @@
              'images/OlympusThumb.jpg',
              ['images/OlympusOR.png', 'images/OlympusBare.jpg', 'images/OlympusPretty.JPG', 'yt:https://www.youtube.com/live/3G0n4SnmLRg?si=wmE9GyHqOpu9J_fI&t=5203'],
              'Fall 2024 – Summer 2025',
-             'OpenRocket, Workshop Tools, Composites',
+             'OpenRocket, Composites Manufacturing, Workshop Tools, Structural Design',
              ['Rocketry', 'Composites']
            )">
         <div class="card-thumb-wrap">
@@ -621,7 +568,7 @@
              'images/BattleBot1.png',
              ['images/BattleBot2.png', 'images/BBinternal.png', 'images/BattleBot1.png', 'images/BBVid.mp4'],
              'Spring 2025',
-             'SolidWorks, 3D Printing, Mechanical Design, Gear Train Design',
+             'SolidWorks, 3D Printing, Gear Train Design, Mechanical Design',
              ['Mechanical', 'Design', 'Manufacturing']
            )">
         <div class="card-thumb-wrap">
@@ -650,7 +597,7 @@
              'images/LS2.jpg',
              ['images/LS1.jpg','slides:https://docs.google.com/presentation/d/e/2PACX-1vS3SCGuCcJbLrPnORBI4uGHLe2iE5dHowGZyayA8a7IU2xTX6MPhVZzcCGCoJWT7thcvJI-Dy-50b5S/pubembed?start=false&loop=false&delayms=60000'],
              'Spring 2025',
-             'Wind Tunnel Testing, Aerodynamic Analysis, Vortex Generators',
+             'Aerodynamic Analysis, Wind Tunnel Testing, Vortex Generators, Boundary Layer Analysis',
              ['Mechanical', 'Aerodynamics']
            )">
         <div class="card-thumb-wrap">
@@ -678,7 +625,7 @@
              'images/MeNViper.jpeg',
              ['images/ViperOR.png', 'images/ViperConstruct1.jpg', 'images/ViperConstruct4.jpg', 'images/ViperConstruct3.jpg', 'images/MeNViper.jpeg', 'images/Viper3.mp4'],
              'Spring 2025',
-             'OpenRocket, Workshop Tools',
+             'OpenRocket, Workshop Tools, Structural Design',
              ['Rocketry', 'Design']
            )">
         <div class="card-thumb-wrap">
@@ -696,11 +643,6 @@
           </div>
         </div>
       </div>
-
-      <!-- ─────────────────────────────────────────
-           COMING SOON:
-           - Drone Simulator / Estimator  → software
-        ───────────────────────────────────────── -->
 
     </div>
   </main>
@@ -743,49 +685,48 @@
       media.forEach(src => {
         if (!src) return;
 
-       // Google Slides embed — prefix with "slides:"
-if (src.startsWith('slides:')) {
-  const url = src.slice(7);
-  const wrap = document.createElement('div');
-  wrap.className = 'pp-slides-wrap';
-  const iframe = document.createElement('iframe');
-  iframe.src = url;
-  iframe.allowFullscreen = true;
-  wrap.appendChild(iframe);
-  mediaEl.appendChild(wrap);
-  return;
-}
+        if (src.startsWith('slides:')) {
+          const url = src.slice(7);
+          const wrap = document.createElement('div');
+          wrap.className = 'pp-slides-wrap';
+          const iframe = document.createElement('iframe');
+          iframe.src = url;
+          iframe.allowFullscreen = true;
+          wrap.appendChild(iframe);
+          mediaEl.appendChild(wrap);
+          return;
+        }
 
-// YouTube embed — prefix with "yt:"
-if (src.startsWith('yt:')) {
-  const url = new URL(src.slice(3));
-  const videoId = url.searchParams.get('v') || url.pathname.split('/').pop();
-  const start = url.searchParams.get('t') || '0';
-  const wrap = document.createElement('div');
-  wrap.className = 'pp-slides-wrap';
-  const iframe = document.createElement('iframe');
-  iframe.src = `https://www.youtube.com/embed/${videoId}?start=${start}`;
-  iframe.allowFullscreen = true;
-  iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-  wrap.appendChild(iframe);
-  mediaEl.appendChild(wrap);
-  return;
-}
-        // PDF embed — prefix with "pdf:"
-if (src.startsWith('pdf:')) {
-  const url = src.slice(4);
-  const wrap = document.createElement('div');
-  wrap.className = 'pp-slides-wrap';
-  const iframe = document.createElement('iframe');
-  iframe.src = url;
-  wrap.appendChild(iframe);
-  mediaEl.appendChild(wrap);
-  return;}
+        if (src.startsWith('yt:')) {
+          const url = new URL(src.slice(3));
+          const videoId = url.searchParams.get('v') || url.pathname.split('/').pop();
+          const start = url.searchParams.get('t') || '0';
+          const wrap = document.createElement('div');
+          wrap.className = 'pp-slides-wrap';
+          const iframe = document.createElement('iframe');
+          iframe.src = `https://www.youtube.com/embed/${videoId}?start=${start}`;
+          iframe.allowFullscreen = true;
+          iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+          wrap.appendChild(iframe);
+          mediaEl.appendChild(wrap);
+          return;
+        }
+
+        if (src.startsWith('pdf:')) {
+          const url = src.slice(4);
+          const wrap = document.createElement('div');
+          wrap.className = 'pp-slides-wrap';
+          const iframe = document.createElement('iframe');
+          iframe.src = url;
+          wrap.appendChild(iframe);
+          mediaEl.appendChild(wrap);
+          return;
+        }
 
         const isVideo = src.match(/\.(mp4|webm|mov)$/i);
         const el = document.createElement(isVideo ? 'video' : 'img');
         el.src = src;
-        if (isVideo) { el.controls = true; el.playsInline = true; el.muted = true; }        
+        if (isVideo) { el.controls = true; el.playsInline = true; el.muted = true; }
         mediaEl.appendChild(el);
       });
 
@@ -802,18 +743,6 @@ if (src.startsWith('pdf:')) {
     }
 
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeProject(); });
-
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const filter = btn.dataset.filter;
-        document.querySelectorAll('.card').forEach(card => {
-          card.classList.toggle('hidden',
-            filter !== 'all' && card.dataset.category !== filter);
-        });
-      });
-    });
   </script>
 
 </body>
